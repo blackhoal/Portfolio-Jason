@@ -21,25 +21,33 @@ const About = () => {
           <Col lg="4" md="3">
             <div className="about__btns">
               <button
-                className="about__btn about__btn-active"
+                className={`about__btn ${
+                  aboutFilter === 'ABOUT' ? 'about__btn-active' : ''
+                }`}
                 onClick={() => setAboutFilter("ABOUT")}
               >
                 About Me
               </button>
               <button
-                className="about__btn"
+                className={`about__btn ${
+                  aboutFilter === 'EDUCATION' ? 'about__btn-active' : ''
+                }`}
                 onClick={() => setAboutFilter("EDUCATION")}
               >
                 Education
               </button>
               <button
-                className="about__btn"
+                className={`about__btn ${
+                  aboutFilter === 'SKILLS' ? 'about__btn-active' : ''
+                }`}
                 onClick={() => setAboutFilter("SKILLS")}
               >
                 Skills
               </button>
               <button
-                className="about__btn"
+                className={`about__btn ${
+                  aboutFilter === 'AWARD' ? 'about__btn-active' : ''
+                }`}
                 onClick={() => setAboutFilter("AWARD")}
               >
                 Award

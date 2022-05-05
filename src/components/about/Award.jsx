@@ -1,17 +1,53 @@
-import React from 'react'
-import './award.css'
+import React from "react";
+import "./award.css";
 
 const Award = () => {
   return (
-    <div className="award__container">
-        <div className="single__award">
-            <div className="award__year">2022</div>
-            <h6 className="award__title">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur ratione maxime vero adipisci delectus iste tempora facere provident architecto possimus, porro aspernatur. Corporis, eius nesciunt consectetur nobis ea repellendus corrupti.
-            </h6>
-        </div>
+    <div className="award__container d-flex align-items-center flex-wrap justify-content-between">
+      <div className="award__item ">
+        <AwardItem
+          year="2020"
+          title="Best Frontend Developer"
+          text="Lorem ipsum dolor, sit amet consectetur adipisicing elit"
+        />
+      </div>
+
+      <div className="award__item ">
+        <AwardItem
+          year="2020"
+          title="Best Frontend Developer"
+          text="Lorem ipsum dolor, sit amet consectetur adipisicing elit"
+        />
+      </div>
+
+      <div className="award__item ">
+        <AwardItem
+          year="2020"
+          title="Best Frontend Developer"
+          text="Lorem ipsum dolor, sit amet consectetur adipisicing elit"
+        />
+      </div>
+
+      <div className="award__item ">
+        <AwardItem
+          year="2020"
+          title="Best Frontend Developer"
+          text="Lorem ipsum dolor, sit amet consectetur adipisicing elit"
+        />
+      </div>
     </div>
   );
 };
 
-export default Award
+const AwardItem = ({ year, title, text }) => {
+  return (
+    <div className="single__award">
+      <div className="award__year">{year}</div>
+      <h6 className="award__title">
+        {title} - <span>{text}</span>
+      </h6>
+    </div>
+  );
+};
+
+export default Award;
